@@ -1,0 +1,46 @@
+# ============================================================================
+# HotelApp v2 · Java 21 + Maven + JavaFX
+# ============================================================================
+
+# Artefactos de compilación Maven
+target/
+build/
+out/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven Wrapper / logs
+.mvn/wrapper/maven-wrapper.jar
+*.log
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.settings/
+.classpath
+.project
+.metadata/
+
+# Visual Studio Code
+.vscode/
+
+# NetBeans
+nbproject/
+nbbuild/
+nbdist/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ficheros temporales
+*.tmp
+*.bak
+*~

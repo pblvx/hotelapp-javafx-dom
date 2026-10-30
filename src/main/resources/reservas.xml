@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    HOTELAPP v2 · DATOS DEL HOTEL SOL
+    ============================================================================
+    Esquema de persistencia:
+
+      <hotel>
+        <habitaciones>
+          <habitacion numero="..." estado="disponible|reservada|ocupada|mantenimiento">
+            <tipo>, <capacidad>, <planta>, <precio>
+            <cliente>, <documentoContacto>
+            <fechaCheckIn>, <fechaCheckOut>
+            <estadoReserva>, <reservaId>, <nota>
+          </habitacion>
+        </habitaciones>
+        <reservas>
+          <reserva id="RES-0001" habitacion="105" precioNoche="75.00" creadaEn="...">
+            <cliente>, <documentoContacto>, <fechaCheckIn>, <fechaCheckOut>,
+            <estado>, <nota>
+          </reserva>
+        </reservas>
+      </hotel>
+
+    La aplicación lee este árbol con DocumentBuilder y lo serializa de vuelta
+    con TransformerFactory + Transformer. Las habitaciones ocupadas de la
+    Parte 1 se han migrado a reservas con estado "alojada".
+-->
+<hotel actualizado="2026-10-30" ciudad="Madrid" estrellas="4" nombre="Hotel Sol" version="2.0">
+    <habitaciones>
+        <!-- ===================== PLANTA 1 ===================== -->
+        <habitacion estado="disponible" numero="101">
+            <tipo>Individual</tipo>
+            <capacidad>1</capacidad>
+            <planta>1</planta>
+            <precio>55.00</precio>
+        </habitacion>
+        <habitacion estado="disponible" numero="102">
+            <tipo>Doble</tipo>
+            <capacidad>2</capacidad>
+            <planta>1</planta>
+            <precio>75.00</precio>
+        </habitacion>
+        <habitacion estado="mantenimiento" numero="103">
+            <tipo>Doble</tipo>
+            <capacidad>2</capacidad>
+            <planta>1</planta>
+            <precio>75.00</precio>
+            <nota>Revisión del aire acondicionado</nota>
+        </habitacion>
+        <habitacion estado="disponible" numero="104">
+            <tipo>Familiar</tipo>
+            <capacidad>4</capacidad>
+            <planta>1</planta>
+            <precio>110.00</precio>
+        </habitacion>
+        <habitacion estado="ocupada" numero="105">
+            <tipo>Doble</tipo>
+            <capacidad>2</capacidad>
+            <planta>1</planta>
+            <precio>75.00</precio>
+            <cliente>Marta Ruiz</cliente>
+            <documentoContacto>51234567Z · +34 600 111 222</documentoContacto>
+            <fechaCheckIn>2026-10-27</fechaCheckIn>
+            <fechaCheckOut>2026-11-03</fechaCheckOut>
+            <estadoReserva>alojada</estadoReserva>
+            <reservaId>RES-0001</reservaId>
+            <nota>Huésped alojado. Check-out previsto para el 03/11/2026.</nota>
+        </habitacion>
+        <habitacion estado="disponible" numero="106">
+            <tipo>Individual</tipo>
+            <capacidad>1</capacidad>
+            <planta>1</planta>
+            <precio>55.00</precio>
+        </habitacion>
+        <habitacion estado="reservada" numero="107">
+            <tipo>Doble</tipo>
+            <capacidad>2</capacidad>
+            <planta>1</planta>
+            <precio>75.00</precio>
+            <cliente>aaaa</cliente>
+            <documentoContacto>666666666</documentoContacto>
+            <fechaCheckIn>2026-10-30</fechaCheckIn>
+            <fechaCheckOut>2026-11-01</fechaCheckOut>
+            <estadoReserva>confirmada</estadoReserva>
+            <reservaId>RES-0008</reservaId>
+            <nota>Reserva confirmada.</nota>
+        </habitacion>
+        <habitacion estado="ocupada" numero="108">
+            <tipo>Familiar</tipo>
+            <capacidad>4</capacidad>
+            <planta>1</planta>
+            <precio>110.00</precio>
+            <cliente>Familia Ortega</cliente>
+            <documentoContacto>B12345678 · +34 600 222 333</documentoContacto>
+            <fechaCheckIn>2026-10-25</fechaCheckIn>
+            <fechaCheckOut>2026-11-02</fechaCheckOut>
+            <estadoReserva>alojada</estadoReserva>
+            <reservaId>RES-0002</reservaId>
+            <nota>Huéspedes alojados. Check-out previsto para el 02/11/2026.</nota>
+        </habitacion>
+        <habitacion estado="disponible" numero="109">
+            <tipo>Doble</tipo>
+            <capacidad>2</capacidad>
+            <planta>1</planta>
+            <precio>75.00</precio>
+        </habitacion>
+        <habitacion estado="mantenimiento" numero="110">
+            <tipo>Suite</tipo>
+            <capacidad>3</capacidad>
+            <planta>1</planta>
+            <precio>145.00</precio>
+            <nota>Pintura y cambio de mobiliario</nota>
+        </habitacion>
+        <habitacion estado="disponible" numero="111">
+            <tipo>Doble</tipo>
+            <capacidad>2</capacidad>
+            <planta>1</planta>
+            <precio>75.00</precio>
+        </habitacion>
+        <habitacion estado="disponible" numero="112">
+            <tipo>Doble superior</tipo>
+            <capacidad>2</capacidad>
+            <planta>1</planta>
+            <precio>89.00</precio>
+        </habitacion>
+        <!-- ===================== PLANTA 2 ===================== -->
+        <habitacion estado="disponible" numero="121">
+            <tipo>Individual</tipo>
+            <capacidad>1</capacidad>
+            <planta>2</planta>
+            <precio>59.00</precio>
+        </habitacion>
+        <habitacion estado="disponible" numero="122">
+            <tipo>Doble</tipo>
+            <capacidad>2</capacidad>
+            <planta>2</planta>
+            <precio>79.00</precio>
+        </habitacion>
+        <habitacion estado="ocupada" numero="123">
+            <tipo>Doble</tipo>
+            <capacidad>2</capacidad>
+            <planta>2</planta>
+            <precio>79.00</precio>
+            <cliente>Laura Gómez</cliente>
+            <documentoContacto>49876543K · +34 600 333 444</documentoContacto>
+            <fechaCheckIn>2026-10-28</fechaCheckIn>
+            <fechaCheckOut>2026-11-04</fechaCheckOut>
+            <estadoReserva>alojada</estadoReserva>
+            <reservaId>RES-0003</reservaId>
+            <nota>Huésped alojada. Check-out previsto para el 04/11/2026.</nota>
+        </habitacion>
+        <habitacion estado="disponible" numero="124">
+            <tipo>Doble</tipo>
+            <capacidad>2</capacidad>
+            <planta>2</planta>
+            <precio>79.00</precio>
+        </habitacion>
+        <habitacion estado="disponible" numero="125">
+            <tipo>Familiar</tipo>
+            <capacidad>4</capacidad>
+            <planta>2</planta>
+            <precio>115.00</precio>
+        </habitacion>
+        <habitacion estado="ocupada" numero="126">
+            <tipo>Doble superior</tipo>
+            <capacidad>2</capacidad>
+            <planta>2</planta>
+            <precio>92.00</precio>
+            <cliente>Javier Molina</cliente>
+            <documentoContacto>33445566M · +34 600 444 555</documentoContacto>
+            <fechaCheckIn>2026-10-26</fechaCheckIn>
+            <fechaCheckOut>2026-11-01</fechaCheckOut>
+            <estadoReserva>alojada</estadoReserva>
+            <reservaId>RES-0004</reservaId>
+            <nota>Huésped alojado. Check-out previsto para el 01/11/2026.</nota>
+        </habitacion>
+        <habitacion estado="disponible" numero="127">
+            <tipo>Suite</tipo>
+            <capacidad>3</capacidad>
+            <planta>2</planta>
+            <precio>149.00</precio>
+        </habitacion>
+        <habitacion estado="ocupada" numero="128">
+            <tipo>Suite</tipo>
+            <capacidad>3</capacidad>
+            <planta>2</planta>
+            <precio>149.00</precio>
+            <cliente>Ana Beltrán</cliente>
+            <documentoContacto>28765432L · +34 600 555 666</documentoContacto>
+            <fechaCheckIn>2026-10-29</fechaCheckIn>
+            <fechaCheckOut>2026-11-05</fechaCheckOut>
+            <estadoReserva>alojada</estadoReserva>
+            <reservaId>RES-0005</reservaId>
+            <nota>Huésped alojada. Check-out previsto para el 05/11/2026.</nota>
+        </habitacion>
+        <!-- ===================== PLANTA 3 ===================== -->
+        <habitacion estado="disponible" numero="201">
+            <tipo>Individual</tipo>
+            <capacidad>1</capacidad>
+            <planta>3</planta>
+            <precio>62.00</precio>
+        </habitacion>
+        <habitacion estado="ocupada" numero="202">
+            <tipo>Doble</tipo>
+            <capacidad>2</capacidad>
+            <planta>3</planta>
+            <precio>82.00</precio>
+            <cliente>Pablo Serrano</cliente>
+            <documentoContacto>45678912P · +34 600 666 777</documentoContacto>
+            <fechaCheckIn>2026-10-28</fechaCheckIn>
+            <fechaCheckOut>2026-11-02</fechaCheckOut>
+            <estadoReserva>alojada</estadoReserva>
+            <reservaId>RES-0006</reservaId>
+            <nota>Huésped alojado. Check-out previsto para el 02/11/2026.</nota>
+        </habitacion>
+        <habitacion estado="disponible" numero="203">
+            <tipo>Doble</tipo>
+            <capacidad>2</capacidad>
+            <planta>3</planta>
+            <precio>82.00</precio>
+        </habitacion>
+        <habitacion estado="disponible" numero="204">
+            <tipo>Familiar</tipo>
+            <capacidad>4</capacidad>
+            <planta>3</planta>
+            <precio>120.00</precio>
+        </habitacion>
+        <habitacion estado="ocupada" numero="205">
+            <tipo>Suite</tipo>
+            <capacidad>3</capacidad>
+            <planta>3</planta>
+            <precio>155.00</precio>
+            <cliente>Elena Navarro</cliente>
+            <documentoContacto>12345678N · +34 600 777 888</documentoContacto>
+            <fechaCheckIn>2026-10-30</fechaCheckIn>
+            <fechaCheckOut>2026-11-06</fechaCheckOut>
+            <estadoReserva>alojada</estadoReserva>
+            <reservaId>RES-0007</reservaId>
+            <nota>Huésped alojada. Check-out previsto para el 06/11/2026.</nota>
+        </habitacion>
+        <habitacion estado="disponible" numero="206">
+            <tipo>Doble superior</tipo>
+            <capacidad>2</capacidad>
+            <planta>3</planta>
+            <precio>95.00</precio>
+        </habitacion>
+        <habitacion estado="disponible" numero="207">
+            <tipo>Doble</tipo>
+            <capacidad>2</capacidad>
+            <planta>3</planta>
+            <precio>82.00</precio>
+        </habitacion>
+        <habitacion estado="mantenimiento" numero="208">
+            <tipo>Doble</tipo>
+            <capacidad>2</capacidad>
+            <planta>3</planta>
+            <precio>82.00</precio>
+            <nota>Revisión de fontanería</nota>
+        </habitacion>
+    </habitaciones>
+    <!-- =======================================================================
+         RESERVAS ACTIVAS
+         ======================================================================= -->
+    <reservas>
+        <reserva creadaEn="2026-10-27" habitacion="105" id="RES-0001" precioNoche="75.00">
+            <cliente>Marta Ruiz</cliente>
+            <documentoContacto>51234567Z · +34 600 111 222</documentoContacto>
+            <fechaCheckIn>2026-10-27</fechaCheckIn>
+            <fechaCheckOut>2026-11-03</fechaCheckOut>
+            <estado>alojada</estado>
+            <nota>Huésped alojado. Check-out previsto para el 03/11/2026.</nota>
+        </reserva>
+        <reserva creadaEn="2026-10-25" habitacion="108" id="RES-0002" precioNoche="110.00">
+            <cliente>Familia Ortega</cliente>
+            <documentoContacto>B12345678 · +34 600 222 333</documentoContacto>
+            <fechaCheckIn>2026-10-25</fechaCheckIn>
+            <fechaCheckOut>2026-11-02</fechaCheckOut>
+            <estado>alojada</estado>
+            <nota>Huéspedes alojados. Check-out previsto para el 02/11/2026.</nota>
+        </reserva>
+        <reserva creadaEn="2026-10-28" habitacion="123" id="RES-0003" precioNoche="79.00">
+            <cliente>Laura Gómez</cliente>
+            <documentoContacto>49876543K · +34 600 333 444</documentoContacto>
+            <fechaCheckIn>2026-10-28</fechaCheckIn>
+            <fechaCheckOut>2026-11-04</fechaCheckOut>
+            <estado>alojada</estado>
+            <nota>Huésped alojada. Check-out previsto para el 04/11/2026.</nota>
+        </reserva>
+        <reserva creadaEn="2026-10-26" habitacion="126" id="RES-0004" precioNoche="92.00">
+            <cliente>Javier Molina</cliente>
+            <documentoContacto>33445566M · +34 600 444 555</documentoContacto>
+            <fechaCheckIn>2026-10-26</fechaCheckIn>
+            <fechaCheckOut>2026-11-01</fechaCheckOut>
+            <estado>alojada</estado>
+            <nota>Huésped alojado. Check-out previsto para el 01/11/2026.</nota>
+        </reserva>
+        <reserva creadaEn="2026-10-29" habitacion="128" id="RES-0005" precioNoche="149.00">
+            <cliente>Ana Beltrán</cliente>
+            <documentoContacto>28765432L · +34 600 555 666</documentoContacto>
+            <fechaCheckIn>2026-10-29</fechaCheckIn>
+            <fechaCheckOut>2026-11-05</fechaCheckOut>
+            <estado>alojada</estado>
+            <nota>Huésped alojada. Check-out previsto para el 05/11/2026.</nota>
+        </reserva>
+        <reserva creadaEn="2026-10-28" habitacion="202" id="RES-0006" precioNoche="82.00">
+            <cliente>Pablo Serrano</cliente>
+            <documentoContacto>45678912P · +34 600 666 777</documentoContacto>
+            <fechaCheckIn>2026-10-28</fechaCheckIn>
+            <fechaCheckOut>2026-11-02</fechaCheckOut>
+            <estado>alojada</estado>
+            <nota>Huésped alojado. Check-out previsto para el 02/11/2026.</nota>
+        </reserva>
+        <reserva creadaEn="2026-10-30" habitacion="205" id="RES-0007" precioNoche="155.00">
+            <cliente>Elena Navarro</cliente>
+            <documentoContacto>12345678N · +34 600 777 888</documentoContacto>
+            <fechaCheckIn>2026-10-30</fechaCheckIn>
+            <fechaCheckOut>2026-11-06</fechaCheckOut>
+            <estado>alojada</estado>
+            <nota>Huésped alojada. Check-out previsto para el 06/11/2026.</nota>
+        </reserva>
+        <reserva creadaEn="2026-10-30" habitacion="107" id="RES-0008" precioNoche="75.00">
+            <cliente>aaaa</cliente>
+            <documentoContacto>666666666</documentoContacto>
+            <fechaCheckIn>2026-10-30</fechaCheckIn>
+            <fechaCheckOut>2026-11-01</fechaCheckOut>
+            <estado>confirmada</estado>
+            <nota>Reserva confirmada. Pendiente de check-in.</nota>
+        </reserva>
+    </reservas>
+</hotel>
